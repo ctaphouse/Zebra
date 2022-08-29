@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zebra.Api", "zebra.api\Zebra.Api.csproj", "{45A20846-1880-4974-829D-A48CF275E667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zebra.Client", "zebra.client\Zebra.Client.csproj", "{52EE780F-A7E1-4160-92F4-EAD5F54E10DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zebra.Shared", "zebra.shared\Zebra.Shared.csproj", "{6DB428F4-19DB-4700-8ED7-66EF2C4AC1E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A20846-1880-4974-829D-A48CF275E667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A20846-1880-4974-829D-A48CF275E667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A20846-1880-4974-829D-A48CF275E667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A20846-1880-4974-829D-A48CF275E667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EE780F-A7E1-4160-92F4-EAD5F54E10DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EE780F-A7E1-4160-92F4-EAD5F54E10DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EE780F-A7E1-4160-92F4-EAD5F54E10DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EE780F-A7E1-4160-92F4-EAD5F54E10DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB428F4-19DB-4700-8ED7-66EF2C4AC1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB428F4-19DB-4700-8ED7-66EF2C4AC1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB428F4-19DB-4700-8ED7-66EF2C4AC1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB428F4-19DB-4700-8ED7-66EF2C4AC1E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
