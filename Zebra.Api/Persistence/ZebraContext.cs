@@ -12,6 +12,7 @@ public class ZebraContext : DbContext
 
     public DbSet<Animal> Animals { get; set; } = default!;
     public DbSet<Category> Categories { get; set; } = default!;
+    public DbSet<Habitat> Habitats { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
