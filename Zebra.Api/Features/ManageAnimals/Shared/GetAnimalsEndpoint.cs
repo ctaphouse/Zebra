@@ -4,6 +4,8 @@ using Zebra.Shared.Features.ManageAnimals.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+namespace Zebra.Api.Features.ManageAnimals.Shared;
+
 public class GetAnimalsEndpoint : EndpointBaseAsync.WithoutRequest.WithActionResult<GetAnimalsRequest.Response>
 {
     private readonly ZebraContext _context;
