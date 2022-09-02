@@ -17,13 +17,13 @@ public class GetAnimalEndpoint : EndpointBaseAsync.WithRequest<int>.WithActionRe
     [HttpGet(GetAnimalRequest.RouteTemplate)]
     public override async Task<Microsoft.AspNetCore.Mvc.ActionResult<GetAnimalRequest.Response>> HandleAsync(int animalId, CancellationToken cancellationToken = default)
    {
-       var response = await _context.Animals.SingleOrDefaultAsync(animal => animal.Id == animalId, cancellationToken); 
+       var animal = await _context.Animals.SingleOrDefaultAsync(animal => animal.Id == animalId, cancellationToken); 
 
-        if(response is null)
+        if(animal is null)
             return BadRequest("Animal could not be found.");
 
-       var animal = new GetAnimalRequest.Animal(Id: response.Id, Name: response.Name, CategoryId: response.CategoryId);
+       var response = new GetAnimalRequest.Response(new GetAnimalRequest.Animal(Id: animal.Id, Name: animal.Name, CategoryId: animal.CategoryId));
 
-       return Ok(new GetAnimalRequest.Response(animal));
+       return Ok(response);
    }
 }
