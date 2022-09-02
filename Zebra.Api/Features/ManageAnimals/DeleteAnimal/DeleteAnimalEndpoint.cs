@@ -6,7 +6,7 @@ using Zebra.Shared.Features.ManageAnimals.DeleteAnimal;
 
 namespace Zebra.Api.Features.ManageAnimals.DeleteAnimal;
 
-public class DeleteAnimalEndpoint : EndpointBaseAsync.WithRequest<DeleteAnimalRequest>.WithActionResult<bool>
+public class DeleteAnimalEndpoint : EndpointBaseAsync.WithRequest<int>.WithActionResult<bool>
 {
     private readonly ZebraContext _context;
 
@@ -15,9 +15,9 @@ public class DeleteAnimalEndpoint : EndpointBaseAsync.WithRequest<DeleteAnimalRe
         _context = context;
     }
     [HttpDelete(DeleteAnimalRequest.RouteTemplate)]
-    public override async Task<ActionResult<bool>> HandleAsync(DeleteAnimalRequest request, CancellationToken cancellationToken = default)
+    public override async Task<ActionResult<bool>> HandleAsync(int animalId, CancellationToken cancellationToken = default)
     {
-        var animal = await _context.Animals.SingleOrDefaultAsync(animal => animal.Id == request.AnimalId, cancellationToken);
+        var animal = await _context.Animals.SingleOrDefaultAsync(animal => animal.Id == animalId, cancellationToken);
         
         if(animal is null)
             return BadRequest("Animal could not be found.");
