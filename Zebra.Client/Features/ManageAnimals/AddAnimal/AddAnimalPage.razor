@@ -1,0 +1,25 @@
+@page "/add-animal"
+@inject IMediator Mediator
+
+<PageTitle>Add Animal</PageTitle>
+
+<h1>Hello</h1>
+
+<h2>@_animalId</h2>
+
+<button class="btn btn-primary" type="button" @onclick="@(() => Submit())">Submit</button>
+
+@code {
+    private int _animalId;
+    private AnimalDto _animal = default!;
+
+        protected async Task Submit()
+        {
+             _animal = new AnimalDto { Name = "Squirrel", CategoryId = 1};
+
+            var response = await Mediator.Send(new AddAnimalRequest(_animal));
+
+            _animalId = response.AnimalId;
+        }
+}
+
